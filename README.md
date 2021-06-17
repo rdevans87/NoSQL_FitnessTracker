@@ -54,9 +54,17 @@ run `npm init -y` to create `package.json`
 
 Open terminal from `server.js` 
 
+Run `npm start` or `node server` from command-line.
+
+Establish connection to localhost: 3000 in `Mongo Atlas`.
+
+Navigate to `http://localhost:3000/` in browser window. 
 
 
-`npm start` or `node server` to start server.
+
+
+
+
 
 
 
