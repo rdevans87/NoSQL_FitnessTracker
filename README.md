@@ -76,8 +76,6 @@ Visit this link: [Fitness Tracker](/)
 
 When the page loads, users are given the option to create a new workout or continue with their last workout.
 
-When the user loads the page, they
-
 This app includes the following features:
 
 * Add exercises to the most recent workout plan.
