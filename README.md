@@ -4,62 +4,77 @@
 
 Unit 17 NoSQL Homework: Workout Tracker:
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express. Workout Tracker with MongoDB and Mongoose
+This is a Workout Tracker App created with a `MongoDB ` database and `Mongoose schema`, which handles routes with `Express`. The user can log multiple exercises in a workout on a given day as well as track the name, type, weight, sets, reps, and duration of exercise. 
+
+App deployed on Heroku: [nosql-fitnesstracker](/)
+
+Repository on GitHub: [NoSQL_FitnessTracker]
 
 ## User Story
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
-
+```
+As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+ ```
 ## Business Context
 
 A consumer will reach their fitness goals more quickly when they track their workout progress.
 
-## Acceptance Criteria
+## Features
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
+When the user loads the page, they are given the option to create a new workout or continue with their last workout.
 
-The user should be able to:
+The user can:
 
   * Add exercises to the most recent workout plan.
-
   * Add new exercises to a new workout plan.
-
   * View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
-
   * View the total duration of each workout from the past seven workouts on the `stats` page.
 
-> **Important:** Look into using a MongoDB aggregate function to dynamically add up and return the total duration for each workout. Check out the [MongoDB documentation on the $addFields](https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/), the [MongoDB documentation on the $sum operator](https://docs.mongodb.com/manual/reference/operator/aggregation/sum/), and the [Mongoose documentation on aggregate functions](https://mongoosejs.com/docs/api.html#aggregate_Aggregate) to learn how it can be accomplished.
+## Installation 
 
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
+Fork or clone resitory and install depencies
 
-  * [Set Up MongoDB Atlas](../04-Important/MongoAtlas-Setup.md)
+You'll need to set up a MongoDB Atlas account and connect a database from there to your application. 
 
-  * [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
 
-## Commit Early and Often
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
+## Usage
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills.
+[Express](/)
 
-2. Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
 
-Follow these guidelines for committing:
 
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
+## Resources
 
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
+[Heroku](https://www.heroku.com/)
 
-* Test your application before you commit to ensure functionality at every step in the development process.
+[MongoDB](https://www.mongodb.com/cloud/atlas/)
 
-We want you to have well over 200 commits by graduation, so commit early and often!
+[Express](https://www.npmjs.com/package/express)
 
-## Submission on BCS
+[MongoDB documentation on the $addFields](https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/) aggregate function to dynamically add up and return the total duration for each workout. 
+[MongoDB documentation on the $sum operator](https://docs.mongodb.com/manual/reference/operator/aggregation/sum/)
 
-You are required to submit the following:
+[Mongoose documentation on aggregate functions](https://mongoosejs.com/docs/api.html#aggregate_Aggregate) to learn how it can be accomplished.
+
+ [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
+
+[Set Up MongoDB Atlas](../04-Important/MongoAtlas-Setup.md)
+
+## Submitted For Review
 
 * The URL to the deployed application
 
 * The URL to the GitHub repository
+
+
+
+## Questions
+
+[GitHub Profile](https://github.com/rdevans87)
+
+
+## License
+
+[MIT LICENSE](LICENSE)
