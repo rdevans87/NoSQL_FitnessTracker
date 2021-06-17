@@ -30,9 +30,15 @@ const fitnessSchema = new Schema({
     },
      duration: {
         type: Number,
+        required: "Excercise Duration."
+    },
+     weight: {
+        type: Number,
+        
 
 
-    }
+     }
+    
      
    
    
