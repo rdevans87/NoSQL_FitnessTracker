@@ -15,6 +15,7 @@ Repository on GitHub: [NoSQL_FitnessTracker](/)
 ## Table of Content
 [User Story](user-story)
 [Business Context](business-context)
+[Mock Up](mock-up)
 [Installation](installation)
 [Usage](usage)
 [Features](features)
