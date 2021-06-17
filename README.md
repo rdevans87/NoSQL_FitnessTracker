@@ -49,13 +49,11 @@ Establish connection to localhost: 3000 in `Mongo Atlas`.
 
 Navigate to `http://localhost:3000/` in browser window.
 
-A fully functional Fitness Tracker App will be ready to use as soon as the page load. 
+Fitness Tracker App ready to use as soon as page loads. 
 
-avail`features` of this are listed below.
+The `Features` of this App are described in the next section.
 
-Please note, There are no further requirement to use this Application.  
-
-Use this App without installation visiting the deployed on Herok
+Alternatively, this application is available to use without installation by visiting the: 
 ## Features
 
 When the page loads, users are given the option to create a new workout or continue with their last workout.
