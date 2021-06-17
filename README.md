@@ -8,7 +8,7 @@ This is a Workout Tracker App created with a `MongoDB ` database and `Mongoose s
 
 App deployed on Heroku: [nosql-fitnesstracker](/)
 
-Repository on GitHub: [NoSQL_FitnessTracker]
+Repository on GitHub: [NoSQL_FitnessTracker](/)
 
 ## User Story
 
