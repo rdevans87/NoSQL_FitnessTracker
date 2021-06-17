@@ -10,6 +10,19 @@ App deployed on Heroku: [nosql-fitnesstracker](/)
 
 Repository on GitHub: [NoSQL_FitnessTracker](/)
 
+
+
+## Table of Content
+[User Story](user-story)
+[Business Context](business-context)
+[Installation](installation)
+[Usage](usage)
+[Features](features)
+[Resources](resources)
+[Submitted For Review](submitted-for-review)
+[Questions](questions)
+[License](license)
+
 ## User Story
 
 ```
@@ -37,7 +50,7 @@ run `npm init -y` to create `package.json`
 
 `npm i express` for backend connection with API.
 
-. 
+
 
 ## Usage
 
@@ -49,11 +62,15 @@ Establish connection to localhost: 3000 in `Mongo Atlas`.
 
 Navigate to `http://localhost:3000/` in browser window.
 
-Fitness Tracker App ready to use as soon as page loads. 
+Yo can start using the Fitness Tracker as soon as the page loads.
 
 The `Features` of this App are described in the next section.
 
-Alternatively, this application is available to use without installation by visiting the: 
+Save time and skip installation! For greater accessibility and ease of use, check out the deployed application on Heroku: 
+
+Visit this link: [Fitness Tracker](/)
+
+
 ## Features
 
 When the page loads, users are given the option to create a new workout or continue with their last workout.
@@ -62,13 +79,10 @@ When the user loads the page, they
 
 This app includes the following features:
 
-  * Add exercises to the most recent workout plan.
-  * Add new exercises to a new workout plan.
-  * View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
-  * View the total duration of each workout from the past seven  workouts on the `stats` page.
-
-
-
+* Add exercises to the most recent workout plan.
+* Add new exercises to a new workout plan.
+* View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
+* View the total duration of each workout from the past seven  workouts on the `stats` page.
 
 ## Resources
 
