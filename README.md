@@ -19,17 +19,6 @@ As a user, I want to be able to view create and track daily workouts. I want to 
 
 A consumer will reach their fitness goals more quickly when they track their workout progress.
 
-## Features
-
-When the user loads the page, they are given the option to create a new workout or continue with their last workout.
-
-This app includes the following features:
-
-  * Add exercises to the most recent workout plan.
-  * Add new exercises to a new workout plan.
-  * View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
-  * View the total duration of each workout from the past seven  workouts on the `stats` page.
-
 ## Installation 
 
 `Node.Js` must be installed to run this application.
@@ -52,27 +41,33 @@ run `npm init -y` to create `package.json`
 
 ## Usage
 
-Open terminal from `server.js` 
+Open terminal from `server.js` file in local directory. 
 
-Run `npm start` or `node server` from command-line.
+Run `npm start` or `node server` from the command-line.
 
 Establish connection to localhost: 3000 in `Mongo Atlas`.
 
-Navigate to `http://localhost:3000/` in browser window. 
+Navigate to `http://localhost:3000/` in browser window.
 
+A fully functional Fitness Tracker App will be ready to use as soon as the page load. 
 
+avail`features` of this are listed below.
 
+Please note, There are no further requirement to use this Application.  
 
+Use this App without installation visiting the deployed on Herok
+## Features
 
+When the page loads, users are given the option to create a new workout or continue with their last workout.
 
+When the user loads the page, they
 
+This app includes the following features:
 
-
-
-
-
-
-
+  * Add exercises to the most recent workout plan.
+  * Add new exercises to a new workout plan.
+  * View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
+  * View the total duration of each workout from the past seven  workouts on the `stats` page.
 
 
 
