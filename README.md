@@ -32,9 +32,9 @@ The user can:
 
 ## Installation 
 
-Fork or clone resitory and install depencies
+Fork or clone rep0sitory and install dependencies:
 
-You'll need to set up a MongoDB Atlas account and connect a database from there to your application. 
+You'll need to set up a MongoDB Atlas account and connect a database to your application. 
 
 
 
