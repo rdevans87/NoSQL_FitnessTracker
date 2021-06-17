@@ -23,22 +23,30 @@ A consumer will reach their fitness goals more quickly when they track their wor
 
 When the user loads the page, they are given the option to create a new workout or continue with their last workout.
 
-The user can:
+This app includes the following features:
 
   * Add exercises to the most recent workout plan.
   * Add new exercises to a new workout plan.
   * View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
-  * View the total duration of each workout from the past seven workouts on the `stats` page.
+  * View the total duration of each workout from the past seven  workouts on the `stats` page.
 
 ## Installation 
 
-Fork or clone rep0sitory and install dependencies:
+`Node.Js` must be installed to run this application.
 
-You'll need to set up a MongoDB Atlas account and connect a database to your application. 
+You'll need to set up a `MongoDB Atlas` account and connect a database to your application.
 
+Fork or clone repository and install dependencies:
 
+`npm i mongoose`
+
+`npm i express` 
+
+. 
 
 ## Usage
+
+run `npm init -y` to create `packa
 
 [Express](/)
 
@@ -47,11 +55,15 @@ You'll need to set up a MongoDB Atlas account and connect a database to your app
 
 ## Resources
 
-[Heroku](https://www.heroku.com/)
+[Heroku](https://www.heroku.com/) cloud-application platform
 
-[MongoDB](https://www.mongodb.com/cloud/atlas/)
+[MongoDB](https://www.mongodb.com/cloud/atlas/) NoSQL document database composed of field and value pairs.
 
-[Express](https://www.npmjs.com/package/express)
+[NodeJS](https://nodejs.org/en/) open-source, cross-platform, back-end JavaScript runtime environment.
+
+[Mongoose](https://www.npmjs.com/package/mongoose)a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports both promises and callbacks.
+
+[Express](https://www.npmjs.com/package/express) a node.js web application framework known as middleware for API creation.
 
 [MongoDB documentation on the $addFields](https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/) aggregate function to dynamically add up and return the total duration for each workout. 
 [MongoDB documentation on the $sum operator](https://docs.mongodb.com/manual/reference/operator/aggregation/sum/)
