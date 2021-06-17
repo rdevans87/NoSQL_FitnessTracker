@@ -36,19 +36,35 @@ This app includes the following features:
 
 You'll need to set up a `MongoDB Atlas` account and connect a database to your application.
 
-Fork or clone repository and install dependencies:
+Fork or clone repository and open application.
 
-`npm i mongoose`
+From the command line: 
 
-`npm i express` 
+run `npm init -y` to create `package.json`
+
+`npm i` for package manager and `node_modules`
+
+`npm i mongoose` to create path to Mongo database. 
+
+`npm i express` for backend connection with API.
 
 . 
 
 ## Usage
 
-run `npm init -y` to create `packa
+Open terminal from `server.js` 
 
-[Express](/)
+
+
+`npm start` or `node server` to start server.
+
+
+
+
+
+
+
+
 
 
 
