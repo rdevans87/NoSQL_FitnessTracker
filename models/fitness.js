@@ -32,14 +32,27 @@ const fitnessSchema = new Schema({
         type: Number,
         required: "Excercise Duration."
     },
-     weight: {
+     distance: {
         type: Number,
-        
-
-
-     }
+    },
+    weight: {
+       type: Number,
     
-     
+    },
+    reps: {
+       type: Number,
+    },
+    sets: {
+        type: Number,
+
+    },
+  },
+
+],
+    
+});
+
+const Fitness = 
    
    
    
