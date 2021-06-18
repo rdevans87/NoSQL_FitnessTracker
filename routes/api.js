@@ -8,3 +8,15 @@
 const router = require('express').Router();
 const Fitness = require("../models/fitness.js");
 
+router.get("/api/workouts", (req, res) => {
+Fitness.aggregate([{
+ $addFields: {
+    totalDuraction: {
+        $sum: { "$exercise.duration" },
+
+
+ }
+
+
+
+}))
