@@ -18,3 +18,11 @@ Fitness.workout.find ({})
     res.json(err);
 });
  
+
+router.put("/workouts/:id", ({ params,. body}, res) => {
+
+
+
+
+    
+}
