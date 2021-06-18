@@ -25,7 +25,7 @@ Fitness.workout.findByIdAndUpdate(
     params.id,
     {
         $push: {
-            exercise.body,
+            exercise: body,
         },
 
     },
