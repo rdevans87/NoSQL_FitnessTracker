@@ -8,7 +8,7 @@
 const router = require('express').Router();
 const Fitness = require("../models/fitness.js");
 
-
+//view combined weight of multiple exercises 
 router.get("/api/workouts", (req, res) => {
 Fitness.workout.find ({})
 .then(fitnessWorkout => {
@@ -19,7 +19,7 @@ Fitness.workout.find ({})
     res.json(err);
 });
  
-
+//Add exercises to the most recent workout plan
 router.put("/workouts/:id", ({ params, body }, res) => {
 console.log(body);
 Fitness.workout.findByIdAndUpdate(
@@ -46,6 +46,7 @@ Fitness.workout.findByIdAndUpdate(
 
 });
 
+//add new exercises to the work out plan
 router.post("/workouts", ({ body }, res) => {
 console.log(body);
 Fitness.workout.create({})
@@ -57,3 +58,4 @@ Fitness.workout.create({})
     res.json(err);
 
 });
+
