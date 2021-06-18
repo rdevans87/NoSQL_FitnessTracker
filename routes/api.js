@@ -19,9 +19,9 @@ Fitness.workout.find ({})
 });
  
 
-router.put("/workouts/:id", ({ params, body}, res) => {
+router.put("/workouts/:id", ({ params, body }, res) => {
 console.log(body);
-Fitness.workout.findByIdAndUpdate( params
+Fitness.workout.findByIdAndUpdate(
     params.id,
     {
         $push: {
