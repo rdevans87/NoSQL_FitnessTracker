@@ -44,3 +44,12 @@ Fitness.workout.findByIdAndUpdate(
     });
 
 });
+
+router.post("/workouts, ({ body }, res) => {
+console.log(body);
+Fitness.workout.create({})
+
+
+
+
+}
