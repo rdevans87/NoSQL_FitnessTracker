@@ -30,9 +30,17 @@ Fitness.workout.findByIdAndUpdate( params
 
     },
     {
-        
+        new: true,
+        runValidators: true
 
+    }
+)
+    .then(fitnessWorkout);
+    res.json(fitnessWorkout);
 
+    })
+    .catch(err => {
+        res.json(err);
+    });
 
-
-}
+});
