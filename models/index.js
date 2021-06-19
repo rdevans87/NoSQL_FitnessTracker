@@ -6,7 +6,7 @@
 // View the total duration of each workout from the past seven  workouts on the `stats` page.
 
 module.exports = {
-    Fitness: require("./fitness")
+    Workout: require("./workout")
 
 }
 
