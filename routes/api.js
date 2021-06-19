@@ -55,7 +55,7 @@ Fitness.workout.create({})
 })
 .catch(err => {
     res.json(err);
-
+})
 res.send("POST")
 
 });
@@ -73,7 +73,6 @@ router.get("/api/workouts/range", (req, red) => {
 
 });
 
-});
 
 module.exports = router;
 
