@@ -10,7 +10,7 @@ const Fitness = require("../models/fitness.js");
 
 //view combined weight of multiple exercises 
 router.get("/api/workouts", (req, res) => {
-Fitness.workout.find ({})
+Fitness.workout.find({})
 .then(fitnessWorkout => {
     res.json(fitnessWorkout);
 
@@ -54,10 +54,10 @@ Fitness.workout.create({})
 .then (fitnessWorkout);
     res.json(fitnessWorkout);
 });
-// .catch(err => {
-//     res.json(err);
+.catch(err => {
+    res.json(err);
 
-// });
+});
 
 //total duration of each workout from the past seven.
 router.get("/api/workouts/range", (req, red) => {
