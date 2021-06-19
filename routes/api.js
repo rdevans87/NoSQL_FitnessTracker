@@ -10,11 +10,11 @@ const Fitness = require("../models/fitness.js");
 
 //view combined weight of multiple exercises 
 router.get("/workouts", (req, res) => {
-Fitness.find({}).workout
+Fitness.aggregate()
 .then(dbWorkouts => {
     res.json(dbWorkouts);
-
 })
+
 .then($addFields, {
         totaDuration: { $sum: "$exercise.duration"},
 })
@@ -43,7 +43,7 @@ Fitness.findByIdAndUpdate(
 
     })
     .catch(err => {
-        res.json(err);
+        res.status(400).json(err);
     });
 
 });
