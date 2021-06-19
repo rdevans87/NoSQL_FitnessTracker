@@ -10,7 +10,7 @@ const app = express();
 app.use(logger("dev"));
 
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -29,7 +29,9 @@ mongoose.connect(
 
 
 app.use(require('./routes/api.js'));
-app.use(require('/routes/route.js'));
+app.use(require('./routes/routes.js'));
+
+
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}`);
