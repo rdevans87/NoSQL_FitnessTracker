@@ -59,3 +59,16 @@ Fitness.workout.create({})
 
 });
 
+//total duration of each workout from the past seven.
+router.get("/workouts/range", (req, red) => {
+ Fitness.Workout.find({}).limit(7)
+ .then(fitnessWorkout) => {
+    res.json(fitnessWorkout);
+ })
+ .catch(err => {
+     res.json(err);
+ });
+
+});
+
+module.exports = router;
