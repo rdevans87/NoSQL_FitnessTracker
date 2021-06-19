@@ -6,7 +6,7 @@
 // View the total duration of each workout from the past seven  workouts on the `stats` page.
 
 const router = require('express').Router();
-const Fitness = require("../models/fitness.js");
+const Workour = require("../models/workout.js");
 
 //view combined weight of multiple exercises 
 router.get("./api/workouts", (req, res) => {
