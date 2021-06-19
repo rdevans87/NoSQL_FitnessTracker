@@ -10,9 +10,9 @@ const Fitness = require("../models/fitness.js");
 
 //view combined weight of multiple exercises 
 router.get("/api/workouts", (req, res) => {
-Fitness.workout.find({})
-.then(fitnessWorkout => {
-    res.json(fitnessWorkout);
+Fitness.Workout.find({})
+.then(fitnessWorkouts => {
+    res.json(fitnessWorkouts);
 
 })
 .then($addFields, {
@@ -27,22 +27,19 @@ Fitness.workout.find({})
 //Add exercises to the most recent workout plan
 router.put("/api/workouts/:id", ({ params, body }, res) => {
 console.log(body);
-Fitness.workout.findByIdAndUpdate(
+Fitness.Workout.findByIdAndUpdate(
     params.id,
-    {
-        $push: {
-            exercise: body,
-        },
-
+    { $push:    {
+        exercise: body
+         },
     },
     {
         new: true,
-        runValidators: true
-
-    }
+        runValidators: true,
+    },
 )
-    .then(fitnessWorkout);
-    res.json(fitnessWorkout);
+    .then(fitnessWorkouts => {
+    res.json(fitnessWorkouts);
 
     })
     .catch(err => {
@@ -54,9 +51,9 @@ Fitness.workout.findByIdAndUpdate(
 //add new exercise to a new workout plan.
 router.post("/api/workouts", ({ body }, res) => {
 console.log(body);
-Fitness.workout.create({})
-.then(fitnessWorkout => {
-    res.json(fitnessWorkout);
+Fitness.Workout.create({})
+.then(fitnessWorkouts => {
+    res.json(fitnessWorkouts);
 })
 .catch(err => {
     res.json(err);
@@ -74,6 +71,7 @@ router.get("/api/workouts/range", (req, red) => {
 })
 .then($addFields, {
         totaDuration: { $sum: "$exercise.duration"},
+        totalWeight: { $sum: "$exercise.weight"},
 })
 .catch(err => {
     res.json(err);
