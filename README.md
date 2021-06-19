@@ -100,9 +100,9 @@ This app includes the following features:
 
 [Mongoose documentation on aggregate functions](https://mongoosejs.com/docs/api.html#aggregate_Aggregate) to learn how it can be accomplished.
 
- [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
+ [Deploy with Heroku and MongoDB Atlas](./assets/MongoAtlas-Deploy.md)
 
-[Set Up MongoDB Atlas](../04-Important/MongoAtlas-Setup.md)
+[Set Up MongoDB Atlas](./assets/MongoAtlas-Setup.md)
 
 ## Submitted For Review
 
