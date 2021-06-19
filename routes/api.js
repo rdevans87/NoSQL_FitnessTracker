@@ -15,8 +15,13 @@ Fitness.workout.find({})
     res.json(fitnessWorkout);
 
 })
+.then($addFields, {
+        totaDuration: { $sum: "$exercise.duration"},
+})
 .catch(err => {
     res.json(err);
+});
+
 });
  
 //Add exercises to the most recent workout plan
@@ -50,7 +55,7 @@ Fitness.workout.findByIdAndUpdate(
 router.post("/api/workouts", ({ body }, res) => {
 console.log(body);
 Fitness.workout.create({})
-.then (fitnessWorkout => {
+.then(fitnessWorkout => {
     res.json(fitnessWorkout);
 })
 .catch(err => {
@@ -66,10 +71,13 @@ router.get("/api/workouts/range", (req, red) => {
  Fitness.Workout.find({}).limit(7)
  .then(fitnessWorkout => {
     res.json(fitnessWorkout);
- })
- .catch(err => {
-     res.json(err);
- });
+})
+.then($addFields, {
+        totaDuration: { $sum: "$exercise.duration"},
+})
+.catch(err => {
+    res.json(err);
+});
 
 });
 
