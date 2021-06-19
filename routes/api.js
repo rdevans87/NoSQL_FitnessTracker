@@ -9,7 +9,7 @@ const router = require('express').Router();
 const Fitness = require("../models/fitness.js");
 
 //view combined weight of multiple exercises 
-router.get("/api/workouts", (req, res) => {
+router.get("./api/workouts", (req, res) => {
 Fitness.aggregate.find({})
 .then(dbWorkouts => {
     res.json(dbWorkouts);
@@ -57,14 +57,13 @@ Fitness.create({})
 })
 .catch(err => {
     res.json(err);
-})
-res.send("POST")
+});
 
 });
 
 
 //total duration of each workout from the past seven.
-router.get("/api/workouts/range", (req, red) => {
+router.get("./api/workouts/range", (req, red) => {
  Fitness.aggregate.limit(7)
  .then(dbWorkouts => {
     res.json(dbWorkouts);
