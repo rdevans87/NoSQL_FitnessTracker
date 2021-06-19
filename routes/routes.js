@@ -13,14 +13,14 @@ router.get("/exercise", (req, res) => {
 
 });
 
-router.get("/", (req, res) => {
-    res.sendFile(path.join(__dirmane, "../public/index.html"));
+// router.get("/", (req, res) => {
+//     res.sendFile(path.join(__dirmane, "../public/index.html"));
 
-});
+// });
 
 
 router.get("/stats", (req, res) => {
-    res.sendFile(path.join(__dirnname, "../public/stats.html"));
+    res.sendFile(path.join(__dirname, "../public/stats.html"));
 
 });
 
