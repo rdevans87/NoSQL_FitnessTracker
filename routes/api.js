@@ -38,8 +38,8 @@ Fitness.findByIdAndUpdate(
         runValidators: true,
     },
 )
-    .then(fitnessWorkouts => {
-    res.json(fitnessWorkouts);
+    .then(dbWorkouts => {
+    res.json(dbWorkouts);
 
     })
     .catch(err => {
@@ -52,8 +52,8 @@ Fitness.findByIdAndUpdate(
 router.post("/workouts", ({ body }, res) => {
 console.log(body);
 Fitness.create({})
-.then(fitnessWorkouts => {
-    res.json(fitnessWorkouts);
+.then(dbWorkouts => {
+    res.json(dbWorkouts);
 })
 .catch(err => {
     res.json(err);
@@ -66,8 +66,8 @@ res.send("POST")
 //total duration of each workout from the past seven.
 router.get("/workouts/range", (req, red) => {
  Fitness.find({}).limit(7)
- .then(fitnessWorkout => {
-    res.json(fitnessWorkout);
+ .then(dbWorkouts => {
+    res.json(dbWorkouts);
 })
 .then($addFields, {
         totaDuration: { $sum: "$exercise.duration"},
