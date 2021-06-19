@@ -11,8 +11,8 @@ const Fitness = require("../models/fitness.js");
 //view combined weight of multiple exercises 
 router.get("/workouts", (req, res) => {
 Fitness.find({}).workout
-.then(fitnessWorkouts => {
-    res.json(fitnessWorkouts);
+.then(dbWorkouts => {
+    res.json(dbWorkouts);
 
 })
 .then($addFields, {
