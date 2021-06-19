@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 // Concise output colored by response status for development use.
-app.use(morgan("dev"))
+app.use(morgan("dev"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
