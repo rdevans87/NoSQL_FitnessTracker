@@ -14,7 +14,8 @@ app.use(express.static("public"));
 // may need to update file to workout.js instead of fitness.js to avoid confusion.
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitness", {
   useNewUrlParser: true,
-  useFindAndModify: false
+  useFindAndModify: false,
+  useUnifiedTopology: true 
 });
 
 // routes

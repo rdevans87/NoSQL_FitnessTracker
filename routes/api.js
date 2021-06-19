@@ -52,11 +52,11 @@ console.log(body);
 Fitness.workout.create({})
 .then (fitnessWorkout);
     res.json(fitnessWorkout);
-})
-.catch(err => {
-    res.json(err);
-
 });
+// .catch(err => {
+//     res.json(err);
+
+// });
 
 //total duration of each workout from the past seven.
 router.get("/workouts/range", (req, red) => {
