@@ -9,20 +9,24 @@ const router = require('express').Router();
 const Workout = require("../models/workout.js");
 
 //view combined weight of multiple exercises 
-router.get("/workouts", (req, res) => {
-    Workout.aggregate.find({})
-        .then((dbWorkouts) => {
+router.get("/api/workouts", (req, res) => {
+    Workout.aggregate([
+        {
+         $addFields: {
+            totalDuration: { 
+                $sum: "$exercises.duration",
+              },
+            },
+          },
+        ])
+          .then((dbWorkouts) => {
             res.json(dbWorkouts);
         })
-
-        .then(($addFields), {
-            totalDuration: { $sum: "$exercises.duration" },
-        })
-        .catch(err => {
+          .catch(err => {
             res.json(err);
         });
 
-});
+    });
 
 //Add exercises to the most recent workout plan
 router.put("/api/workouts/:id", ({ params, body }, res) => {
@@ -35,15 +39,15 @@ router.put("/api/workouts/:id", ({ params, body }, res) => {
         },
         {
             new: true,
-            runValidators: true,
+            runValidators: true
         },
-    )
-        .then((dbWorkouts) => {
-            res.json(dbWorkouts);
+      )
+        .then((dbWorkout) => {
+            res.json(dbWorkout);
 
         })
         .catch((err) => {
-            res.status(400).json(err);
+            res.json(err);
         });
 
 });
@@ -51,8 +55,8 @@ router.put("/api/workouts/:id", ({ params, body }, res) => {
 //add new exercise to a new workout plan.
 router.post("/api/workouts", (req, res) => {
     Workout.create({})
-        .then((dbWorkouts) => {
-            res.json(dbWorkouts);
+        .then((dbWorkout) => {
+            res.json(dbWorkout);
         })
         .catch((err) => {
             res.json(err);
@@ -68,10 +72,10 @@ router.get("/api/workouts/range", (req, res) => {
             console.log(dbWorkouts);
             res.json(dbWorkouts);
         })
-        .then(($addFields), {
+        .then(($addFields, {
             totalDuration: { $sum: "$exercises.duration" },
             totalWeight: { $sum: "$exercises.weight" },
-        })
+        }))
         .catch((err) => {
             res.json(err);
         });
