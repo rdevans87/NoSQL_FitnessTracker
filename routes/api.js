@@ -6,11 +6,11 @@
 // View the total duration of each workout from the past seven  workouts on the `stats` page.
 
 const router = require('express').Router();
-const Workour = require("../models/workout.js");
+const Workout = require("../models/workout.js");
 
 //view combined weight of multiple exercises 
 router.get("./api/workouts", (req, res) => {
-Fitness.aggregate.find({})
+Workout.aggregate.find({})
 .then(dbWorkouts => {
     res.json(dbWorkouts);
 })
@@ -27,7 +27,7 @@ Fitness.aggregate.find({})
 //Add exercises to the most recent workout plan
 router.put("/api/workouts/:id", ({ params, body }, res) => {
 console.log(body);
-Fitness.findByIdAndUpdate(
+Workout.findByIdAndUpdate(
     params.id,
     { $push:    {
         exercise: body
@@ -51,7 +51,7 @@ Fitness.findByIdAndUpdate(
 //add new exercise to a new workout plan.
 router.post("/api/workouts", ({ body }, res) => {
 console.log(body);
-Fitness.create({})
+Workout.create({})
 .then(dbWorkouts => {
     res.json(dbWorkouts);
 })
@@ -64,7 +64,7 @@ Fitness.create({})
 
 //total duration of each workout from the past seven.
 router.get("./api/workouts/range", (req, red) => {
- Fitness.aggregate.limit(7)
+ Workout.aggregate.limit(7)
  .then(dbWorkouts => {
     res.json(dbWorkouts);
 })
