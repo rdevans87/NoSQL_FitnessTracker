@@ -53,7 +53,6 @@ Fitness.workout.create({})
 .then (fitnessWorkout);
     res.json(fitnessWorkout);
 })
-.catch
 .catch(err => {
     res.json(err);
 
