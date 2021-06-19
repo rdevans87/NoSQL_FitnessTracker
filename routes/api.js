@@ -47,17 +47,19 @@ Fitness.workout.findByIdAndUpdate(
 });
 
 //add new exercise to a new workout plan.
-
-router.post("/api/workouts",({ body }, res) => {
+router.post("/api/workouts", ({ body }, res) => {
 console.log(body);
 Fitness.workout.create({})
-.then (fitnessWorkout);
+.then (fitnessWorkout => {
     res.json(fitnessWorkout);
-});
+})
 .catch(err => {
     res.json(err);
 
+res.send("POST")
+
 });
+
 
 //total duration of each workout from the past seven.
 router.get("/api/workouts/range", (req, red) => {
@@ -71,4 +73,7 @@ router.get("/api/workouts/range", (req, red) => {
 
 });
 
+});
+
 module.exports = router;
+
