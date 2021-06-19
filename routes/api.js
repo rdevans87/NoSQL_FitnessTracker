@@ -10,8 +10,7 @@ const Workout = require("../models/workout.js");
 
 //view combined weight of multiple exercises 
 router.get("/api/workouts", (req, res) => {
-    Workout.aggregate([
-        {
+    Workout.aggregate([{
          $addFields: {
             totalDuration: { 
                 $sum: "$exercises.duration",
@@ -67,15 +66,16 @@ router.post("/api/workouts", (req, res) => {
 
 //total duration of each workout from the past seven.
 router.get("/api/workouts/range", (req, res) => {
-    Workout.aggregate.limit(7)
+    Workout.aggregate([{
+        $addFields: {
+        totalDuration: { $sum: "$exercises.duration" },
+        totalWeight: { $sum: "$exercises.weight" },
+        },
+   }])  .limit(7)
         .then((dbWorkouts) => {
             console.log(dbWorkouts);
             res.json(dbWorkouts);
         })
-        .then(($addFields, {
-            totalDuration: { $sum: "$exercises.duration" },
-            totalWeight: { $sum: "$exercises.weight" },
-        }))
         .catch((err) => {
             res.json(err);
         });
