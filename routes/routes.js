@@ -13,7 +13,7 @@ router.get("/exercise", (req, res) => {
 
 });
 
-router.get("/index", (req, res) => {
+router.get("/", (req, res) => {
     res.sendFile(path.join(__dirmane, "../public/index.html"));
 
 });
