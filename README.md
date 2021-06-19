@@ -2,11 +2,12 @@
 
 ## Description
 
+
 Unit 17 NoSQL Homework: Workout Tracker:
 
 This is a Workout Tracker App created with a `MongoDB ` database and `Mongoose schema`, which handles routes with `Express`. The user can log multiple exercises in a workout on a given day as well as track the name, type, weight, sets, reps, and duration of exercise. 
 
-App deployed on Heroku: [nosql-fitnesstracker](/)
+App deployed on Heroku: [fitnezz-trakker](/)
 
 Repository on GitHub: [NoSQL_FitnessTracker](/)
 
@@ -32,6 +33,19 @@ As a user, I want to be able to view create and track daily workouts. I want to 
 
 A consumer will reach their fitness goals more quickly when they track their workout progress.
 
+## Mock-Up
+
+The following screenshots demonstrate the apps functionality:
+
+
+<img src="assets/homepage.png" width="550px"/>
+
+<br>
+
+
+<img src="assets/dashBoard.png" width="550px"/>
+
+
 ## Installation 
 
 `Node.Js` must be installed to run this application.
@@ -53,13 +67,13 @@ run `npm init -y` to create `package.json`
 `npm i morgan`  for request logger middleware.
 
 
-
 ## Usage
 
 Open terminal from `server.js` file in local directory. 
 
-Run `npm start` or `node server` from the command-line.
+First, run `node seeders/seed` to populate the database with initial data set. 
 
+Then, Run `node server` from the command-line to start the server.
 
 Establish connection to localhost: 3000 in `Mongo Atlas`.
 
