@@ -2,12 +2,11 @@
 
 ## Description
 
-
 Unit 17 NoSQL Homework: Workout Tracker:
 
 This is a Workout Tracker App created with a `MongoDB ` database and `Mongoose schema`, which handles routes with `Express`. The user can log multiple exercises in a workout on a given day as well as track the name, type, weight, sets, reps, and duration of exercise. 
 
-App deployed on Heroku: [fitnezz-trakker](/)
+App deployed on Heroku: [fitnezz-trakker](https://fitnezz-trakker.herokuapp.com/)
 
 Repository on GitHub: [NoSQL_FitnessTracker](https://github.com/rdevans87/NoSQL_FitnessTracker)
 
@@ -85,7 +84,7 @@ The `Features` of this App are described in the next section.
 
 Save time and skip installation! For greater accessibility and ease of use, check out the deployed application on Heroku: 
 
-Visit this link: [Fitness Tracker](/)
+Visit this link: [Fitness Tracker](https://fitnezz-trakker.herokuapp.com/)
 
 
 ## Features
@@ -118,17 +117,16 @@ This app includes the following features:
 
 [Mongoose documentation on aggregate functions](https://mongoosejs.com/docs/api.html#aggregate_Aggregate) to learn how it can be accomplished.
 
- [Deploy with Heroku and MongoDB Atlas](./assets/MongoAtlas-Deploy.md)
+[Deploy with Heroku and MongoDB Atlas](./assets/MongoAtlas-Deploy.md)
 
 [Set Up MongoDB Atlas](./assets/MongoAtlas-Setup.md)
 
+
 ## Submitted For Review
 
-* The URL to the deployed application
+* The URL to the deployed application.
 
-* The URL to the GitHub repository
-
-
+* The URL to the GitHub repository.
 
 ## Questions
 
