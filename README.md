@@ -11,7 +11,6 @@ App deployed on Heroku: [nosql-fitnesstracker](/)
 Repository on GitHub: [NoSQL_FitnessTracker](/)
 
 
-
 ## Table of Content
 * [User Story](user-story)
 * [Business Context](business-context)
@@ -49,7 +48,9 @@ run `npm init -y` to create `package.json`
 
 `npm i mongoose` to create path to Mongo database. 
 
-`npm i express` for backend connection with API.
+`npm i express` for web framework for node.js
+
+`npm i morgan`  for request logger middleware.
 
 
 
@@ -58,6 +59,7 @@ run `npm init -y` to create `package.json`
 Open terminal from `server.js` file in local directory. 
 
 Run `npm start` or `node server` from the command-line.
+
 
 Establish connection to localhost: 3000 in `Mongo Atlas`.
 
@@ -94,6 +96,8 @@ This app includes the following features:
 [Mongoose](https://www.npmjs.com/package/mongoose)a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports both promises and callbacks.
 
 [Express](https://www.npmjs.com/package/express) a node.js web application framework known as middleware for API creation.
+
+[Morgan](https://www.npmjs.com/package/morgan) HTTP request logger middleware for node.js
 
 [MongoDB documentation on the $addFields](https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/) aggregate function to dynamically add up and return the total duration for each workout. 
 [MongoDB documentation on the $sum operator](https://docs.mongodb.com/manual/reference/operator/aggregation/sum/)
