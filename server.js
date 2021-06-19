@@ -1,13 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const morgan = require("morgan")
+const logger = require("morgan")
 
 const PORT = 80;
 
 const app = express();
 
 // Concise output colored by response status for development use.
-app.use(morgan("dev"));
+app.use(logger("dev"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -16,7 +16,7 @@ app.use(express.static("public"));
 
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/Workout',
+  process.env.MONGODB_URI || 'mongodb://localhost/workout',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -24,7 +24,6 @@ mongoose.connect(
     useFindAndModify: false,
   }
 );
-
 
 
 app.use(require("./routes/api.js"));
