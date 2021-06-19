@@ -5,12 +5,16 @@
 // View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
 // View the total duration of each workout from the past seven  workouts on the `stats` page.
 
-
 const router = require("express").Router();
 const path =  require("path");
 
 router.get('/', (req,res) => {
     res.sendFile(path.join(_dirmane, "../public/index.html"));
+
+});
+
+router.get("/exercise", (req, res) => {
+    res.sendFile(path.join(_dirname, "..publice/exercise.html"));
 
 });
 
