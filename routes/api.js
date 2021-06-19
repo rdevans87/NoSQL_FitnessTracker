@@ -9,8 +9,8 @@ const router = require('express').Router();
 const Fitness = require("../models/fitness.js");
 
 //view combined weight of multiple exercises 
-router.get("/api/workouts", (req, res) => {
-Fitness.Workout.find({})
+router.get("/workouts", (req, res) => {
+Fitness.find({})
 .then(fitnessWorkouts => {
     res.json(fitnessWorkouts);
 
@@ -27,7 +27,7 @@ Fitness.Workout.find({})
 //Add exercises to the most recent workout plan
 router.put("/api/workouts/:id", ({ params, body }, res) => {
 console.log(body);
-Fitness.Workout.findByIdAndUpdate(
+Fitness.findByIdAndUpdate(
     params.id,
     { $push:    {
         exercise: body
@@ -51,7 +51,7 @@ Fitness.Workout.findByIdAndUpdate(
 //add new exercise to a new workout plan.
 router.post("/api/workouts", ({ body }, res) => {
 console.log(body);
-Fitness.Workout.create({})
+Fitness.create({})
 .then(fitnessWorkouts => {
     res.json(fitnessWorkouts);
 })
@@ -65,7 +65,7 @@ res.send("POST")
 
 //total duration of each workout from the past seven.
 router.get("/api/workouts/range", (req, red) => {
- Fitness.Workout.find({}).limit(7)
+ Fitness.find({}).limit(7)
  .then(fitnessWorkout => {
     res.json(fitnessWorkout);
 })
