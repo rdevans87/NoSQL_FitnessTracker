@@ -8,18 +8,19 @@
 const router = require("express").Router();
 const path =  require("path");
 
-router.get('/', (req,res) => {
-    res.sendFile(path.join(_dirmane, "../public/index.html"));
-
-});
-
 router.get("/exercise", (req, res) => {
-    res.sendFile(path.join(_dirname, "..publice/exercise.html"));
+    res.sendFile(path.join(__dirname, "..publice/exercise.html"));
 
 });
+
+router.get("/index", (req, res) => {
+    res.sendFile(path.join(__dirmane, "../public/index.html"));
+
+});
+
 
 router.get("/stats", (req, res) => {
-    res.sendFile(path.join(_dirnname, "../public/stats.html"));
+    res.sendFile(path.join(__dirnname, "../public/stats.html"));
 
 });
 

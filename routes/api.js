@@ -20,7 +20,7 @@ Fitness.workout.find ({})
 });
  
 //Add exercises to the most recent workout plan
-router.put("/workouts/:id", ({ params, body }, res) => {
+router.put("/api/workouts/:id", ({ params, body }, res) => {
 console.log(body);
 Fitness.workout.findByIdAndUpdate(
     params.id,
@@ -46,8 +46,9 @@ Fitness.workout.findByIdAndUpdate(
 
 });
 
-//add new exercises to the work out plan
-router.post("/workouts", ({ body }, res) => {
+//add new exercise to a new workout plan.
+
+router.post("/api/workouts",({ body }, res) => {
 console.log(body);
 Fitness.workout.create({})
 .then (fitnessWorkout);
@@ -59,7 +60,7 @@ Fitness.workout.create({})
 // });
 
 //total duration of each workout from the past seven.
-router.get("/workouts/range", (req, red) => {
+router.get("/api/workouts/range", (req, red) => {
  Fitness.Workout.find({}).limit(7)
  .then(fitnessWorkout => {
     res.json(fitnessWorkout);

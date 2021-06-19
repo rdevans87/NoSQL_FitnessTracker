@@ -1,26 +1,29 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const morgin = require('morgan')
+const morgan = require('morgan')
 
 const PORT = process.env.PORT || 3000;
 
 const app = express();
+
+// Concise output colored by response status for development use.
+app.use(morgan("dev"))
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
 
-// may need to update file to workout.js instead of fitness.js to avoid confusion.
+
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitness", {
   useNewUrlParser: true,
   useFindAndModify: false,
-  useUnifiedTopology: true 
+  useUnifiedTopology: true,
 });
 
-// routes
+
 app.use(require("./routes/api.js"));
-app.use(require("./routes/routes"));
+app.use(require("./routes/routes.js"));
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
