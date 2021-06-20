@@ -4,9 +4,9 @@
 
 Unit 17 NoSQL Homework: Workout Tracker:
 
-This is a Workout Tracker App created with a `MongoDB ` database and `Mongoose schema`, which handles routes with `Express`. The user can log multiple exercises in a workout on a given day as well as track the name, type, weight, sets, reps, and duration of exercise. 
+This is a Workout Tracker App created with a `MongoDB ` database and `Mongoose schema`, which handles routes with `Express`. The user can log multiple exercises in a workout on a given day as well as track the name, type, weight, sets, reps, and duration of each exercise. 
 
-App deployed on Heroku: [fitnezz-trakker](https://fitnezz-trakker.herokuapp.com/)
+App deployed on Heroku: [nosql-fitnezz-trakker](https://fitnezz-trakker.herokuapp.com/)
 
 Repository on GitHub: [NoSQL_FitnessTracker](https://github.com/rdevans87/NoSQL_FitnessTracker)
 
