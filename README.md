@@ -68,23 +68,23 @@ run `npm init -y` to create `package.json`
 
 ## Usage
 
-Open terminal from `server.js` file in local directory. 
+From the the terminal,
 
-First, run `node seeders/seed` to populate the database with initial data set. 
+Run `node seeders/seed` to import the initial data set.
 
-Then, Run `node server` from the command-line to start the server.
+Run `node server` to establish a connection with `Mongo Atlas`.
 
-Establish connection to localhost: 3000 in `Mongo Atlas`.
+Use`http://localhost:3000/` to run this application in your browser.
 
-Navigate to `http://localhost:3000/` in browser window.
+Users can start a new exercise routine or continue with an existing workout.
 
-Yo can start using the Fitness Tracker as soon as the page loads.
-
-The `Features` of this App are described in the next section.
+The [Features](#features) of this application are described in the next section and listed as part of the acceptance criteria for this assignment.  
 
 Save time and skip installation! For greater accessibility and ease of use, check out the deployed application on Heroku: 
 
 Visit this link: [Fitness Tracker](https://fitnezz-trakker.herokuapp.com/)
+
+For more information on deploying with MongoDB Atlas and Heroku, please visit the [resources](#resources) section.
 
 
 ## Features
@@ -94,8 +94,11 @@ When the page loads, users are given the option to create a new workout or conti
 This app includes the following features:
 
 * Add exercises to the most recent workout plan.
+
 * Add new exercises to a new workout plan.
+
 * View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
+
 * View the total duration of each workout from the past seven  workouts on the `stats` page.
 
 ## Resources
